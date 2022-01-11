@@ -27,7 +27,7 @@
             },
             "smmipsQC.panel": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -39,7 +39,7 @@
             },
             "smmipsQC.smmipRegions": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_200.bed",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_200.bed",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -143,7 +143,7 @@
             },
             "smmipsQC.panel": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -155,7 +155,7 @@
             },
             "smmipsQC.smmipRegions": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_500.bed",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_500.bed",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -258,7 +258,7 @@
             },
             "smmipsQC.panel": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -270,7 +270,7 @@
             },
             "smmipsQC.smmipRegions": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_1000.bed",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_1000.bed",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -373,7 +373,7 @@
             },
             "smmipsQC.panel": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -385,7 +385,7 @@
             },
             "smmipsQC.smmipRegions": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -488,7 +488,7 @@
             },
             "smmipsQC.panel": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -500,7 +500,7 @@
             },
             "smmipsQC.smmipRegions": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -603,7 +603,7 @@
             },
             "smmipsQC.panel": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -615,7 +615,7 @@
             },
             "smmipsQC.smmipRegions": {
                 "contents": {
-                    "configuraion": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_1000.bed",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_1000.bed",
                     "externalIds": [
                         {
                             "id": "TEST",
