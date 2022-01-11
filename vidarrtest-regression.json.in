@@ -66,7 +66,7 @@
             "smmipsQC.align.timeout": null,
             "smmipsQC.align.refFasta": null,
             "smmipsQC.align.refFai": null,
-            "smmipsQC.align.refDict": nul,
+            "smmipsQC.align.refDict": null,
             "smmipsQC.align.bwa": null,
             "smmipsQC.regionsToArray.memory": null,
             "smmipsQC.regionsToArray.timeout": null,
