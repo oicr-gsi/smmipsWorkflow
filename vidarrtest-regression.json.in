@@ -108,7 +108,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/ARCHCVD_Myeloid_200Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_200Test.metrics",
                 "type": "script"
             }
         ]
@@ -224,7 +224,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/ARCHCVD_Myeloid_500Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_500Test.metrics",
                 "type": "script"
             }
         ]
@@ -339,7 +339,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/ARCHCVD_Myeloid_1000Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_1000Test.metrics",
                 "type": "script"
             }
         ]
@@ -454,7 +454,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/TCML_Myeloid_CML_200Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_200Test.metrics",
                 "type": "script"
             }
         ]
@@ -500,7 +500,7 @@
             },
             "smmipsQC.smmipRegions": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_500.bed",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -569,7 +569,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/TCML_Myeloid_CML_500Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_500Test.metrics",
                 "type": "script"
             }
         ]
@@ -684,7 +684,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/TCML_Myeloid_CML_1000Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_1000Test.metrics",
                 "type": "script"
             }
         ]
