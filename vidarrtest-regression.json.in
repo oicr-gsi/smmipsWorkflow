@@ -1,0 +1,692 @@
+[
+    {
+        "arguments": {
+            "smmipsQC.fastq1": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R1.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.fastq2": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R2.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.panel": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.smmipRegions": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_200.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL" 
+            },   
+            "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
+            "smmipsQC.outdir": null,
+            "smmipsQC.maxSubs": null,
+            "smmipsQC.upstreamNucleotides": null,
+            "smmipsQC.umiLength": null,
+            "smmipsQC.match": null,
+            "smmipsQC.mismatch": null,
+            "smmipsQC.gapOpening": null,
+            "smmipsQC.gapExtension": null,
+            "smmipsQC.alignmentOverlapThreshold": null,
+            "smmipsQC.matchesThreshold": null,
+            "smmipsQC.remove": false,
+            "smmipsQC.align.modules": null,
+            "smmipsQC.align.memory": null,
+            "smmipsQC.align.timeout": null,
+            "smmipsQC.align.refFasta": null,
+            "smmipsQC.align.refFai": null,
+            "smmipsQC.align.refDict": null,
+            "smmipsQC.align.bwa": null,
+            "smmipsQC.regionsToArray.memory": null,
+            "smmipsQC.regionsToArray.timeout": null,
+            "smmipsQC.assignSmmips.modules": null,
+            "smmipsQC.assignSmmips.memory": null,
+            "smmipsQC.assignSmmips.timeout": null,
+            "smmipsQC.mergeExtraction.modules": null,
+            "smmipsQC.mergeExtraction.memory": null,
+            "smmipsQC.mergeExtraction.timeout": null,
+            "smmipsQC.mergeCounts.modules": null,
+            "smmipsQC.mergeCounts.memory": null,
+            "smmipsQC.mergeCounts.timeout": null
+        },
+        "description": "smmipsQC workflow test",
+        "engineArguments": {
+          "write_to_cache": false,
+          "read_from_cache": false
+        },
+        "id": "Myeloid_200Test",
+        "metadata": {
+            "smmipsQC.outputExtractionMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_200Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smmipsQC.outputReadCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_200Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_200Test.metrics",
+                "type": "script"
+            }
+        ]
+    },
+          
+    
+    {
+        "arguments": {
+            "smmipsQC.fastq1": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R1.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.fastq2": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R2.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.panel": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.smmipRegions": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_500.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL" 
+            },   
+            "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
+            "smmipsQC.outdir": null,
+            "smmipsQC.maxSubs": null,
+            "smmipsQC.upstreamNucleotides": null,
+            "smmipsQC.umiLength": null,
+            "smmipsQC.match": null,
+            "smmipsQC.mismatch": null,
+            "smmipsQC.gapOpening": null,
+            "smmipsQC.gapExtension": null,
+            "smmipsQC.alignmentOverlapThreshold": null,
+            "smmipsQC.matchesThreshold": null,
+            "smmipsQC.remove": false,
+            "smmipsQC.align.modules": null,
+            "smmipsQC.align.memory": null,
+            "smmipsQC.align.timeout": null,
+            "smmipsQC.align.refFasta": null,
+            "smmipsQC.align.refFai": null,
+            "smmipsQC.align.refDict": null,
+            "smmipsQC.align.bwa": null,
+            "smmipsQC.regionsToArray.memory": null,
+            "smmipsQC.regionsToArray.timeout": null,
+            "smmipsQC.assignSmmips.modules": null,
+            "smmipsQC.assignSmmips.memory": null,
+            "smmipsQC.assignSmmips.timeout": null,
+            "smmipsQC.mergeExtraction.modules": null,
+            "smmipsQC.mergeExtraction.memory": null,
+            "smmipsQC.mergeExtraction.timeout": null,
+            "smmipsQC.mergeCounts.modules": null,
+            "smmipsQC.mergeCounts.memory": null,
+            "smmipsQC.mergeCounts.timeout": null
+        },
+        "description": "smmipsQC workflow test",
+        "engineArguments": {
+          "write_to_cache": false,
+          "read_from_cache": false
+        },
+        "id": "Myeloid_500Test",
+        "metadata": {
+            "smmipsQC.outputExtractionMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_500Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smmipsQC.outputReadCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_500Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_500Test.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    
+    {
+        "arguments": {
+            "smmipsQC.fastq1": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R1.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.fastq2": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R2.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.panel": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.smmipRegions": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_1000.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL" 
+            },   
+            "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
+            "smmipsQC.outdir": null,
+            "smmipsQC.maxSubs": null,
+            "smmipsQC.upstreamNucleotides": null,
+            "smmipsQC.umiLength": null,
+            "smmipsQC.match": null,
+            "smmipsQC.mismatch": null,
+            "smmipsQC.gapOpening": null,
+            "smmipsQC.gapExtension": null,
+            "smmipsQC.alignmentOverlapThreshold": null,
+            "smmipsQC.matchesThreshold": null,
+            "smmipsQC.remove": false,
+            "smmipsQC.align.modules": null,
+            "smmipsQC.align.memory": null,
+            "smmipsQC.align.timeout": null,
+            "smmipsQC.align.refFasta": null,
+            "smmipsQC.align.refFai": null,
+            "smmipsQC.align.refDict": null,
+            "smmipsQC.align.bwa": null,
+            "smmipsQC.regionsToArray.memory": null,
+            "smmipsQC.regionsToArray.timeout": null,
+            "smmipsQC.assignSmmips.modules": null,
+            "smmipsQC.assignSmmips.memory": null,
+            "smmipsQC.assignSmmips.timeout": null,
+            "smmipsQC.mergeExtraction.modules": null,
+            "smmipsQC.mergeExtraction.memory": null,
+            "smmipsQC.mergeExtraction.timeout": null,
+            "smmipsQC.mergeCounts.modules": null,
+            "smmipsQC.mergeCounts.memory": null,
+            "smmipsQC.mergeCounts.timeout": null
+        },
+        "description": "smmipsQC workflow test",
+        "engineArguments": {
+          "write_to_cache": false,
+          "read_from_cache": false
+        },
+        "id": "Myeloid_1000Test",
+        "metadata": {
+            "smmipsQC.outputExtractionMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_1000Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smmipsQC.outputReadCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_1000Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_1000Test.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    
+    {
+        "arguments": {
+            "smmipsQC.fastq1": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R1.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.fastq2": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R2.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.panel": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.smmipRegions": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL" 
+            },   
+            "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
+            "smmipsQC.outdir": null,
+            "smmipsQC.maxSubs": null,
+            "smmipsQC.upstreamNucleotides": null,
+            "smmipsQC.umiLength": null,
+            "smmipsQC.match": null,
+            "smmipsQC.mismatch": null,
+            "smmipsQC.gapOpening": null,
+            "smmipsQC.gapExtension": null,
+            "smmipsQC.alignmentOverlapThreshold": null,
+            "smmipsQC.matchesThreshold": null,
+            "smmipsQC.remove": false,
+            "smmipsQC.align.modules": null,
+            "smmipsQC.align.memory": null,
+            "smmipsQC.align.timeout": null,
+            "smmipsQC.align.refFasta": null,
+            "smmipsQC.align.refFai": null,
+            "smmipsQC.align.refDict": null,
+            "smmipsQC.align.bwa": null,
+            "smmipsQC.regionsToArray.memory": null,
+            "smmipsQC.regionsToArray.timeout": null,
+            "smmipsQC.assignSmmips.modules": null,
+            "smmipsQC.assignSmmips.memory": null,
+            "smmipsQC.assignSmmips.timeout": null,
+            "smmipsQC.mergeExtraction.modules": null,
+            "smmipsQC.mergeExtraction.memory": null,
+            "smmipsQC.mergeExtraction.timeout": null,
+            "smmipsQC.mergeCounts.modules": null,
+            "smmipsQC.mergeCounts.memory": null,
+            "smmipsQC.mergeCounts.timeout": null
+        },
+        "description": "smmipsQC workflow test",
+        "engineArguments": {
+          "write_to_cache": false,
+          "read_from_cache": false
+        },
+        "id": "Myeloid_CML_200Test",
+        "metadata": {
+            "smmipsQC.outputExtractionMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_CML_200Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smmipsQC.outputReadCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_CML_200Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_200Test.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    
+    {
+        "arguments": {
+            "smmipsQC.fastq1": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R1.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.fastq2": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R2.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.panel": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.smmipRegions": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_500.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL" 
+            },   
+            "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
+            "smmipsQC.outdir": null,
+            "smmipsQC.maxSubs": null,
+            "smmipsQC.upstreamNucleotides": null,
+            "smmipsQC.umiLength": null,
+            "smmipsQC.match": null,
+            "smmipsQC.mismatch": null,
+            "smmipsQC.gapOpening": null,
+            "smmipsQC.gapExtension": null,
+            "smmipsQC.alignmentOverlapThreshold": null,
+            "smmipsQC.matchesThreshold": null,
+            "smmipsQC.remove": false,
+            "smmipsQC.align.modules": null,
+            "smmipsQC.align.memory": null,
+            "smmipsQC.align.timeout": null,
+            "smmipsQC.align.refFasta": null,
+            "smmipsQC.align.refFai": null,
+            "smmipsQC.align.refDict": null,
+            "smmipsQC.align.bwa": null,
+            "smmipsQC.regionsToArray.memory": null,
+            "smmipsQC.regionsToArray.timeout": null,
+            "smmipsQC.assignSmmips.modules": null,
+            "smmipsQC.assignSmmips.memory": null,
+            "smmipsQC.assignSmmips.timeout": null,
+            "smmipsQC.mergeExtraction.modules": null,
+            "smmipsQC.mergeExtraction.memory": null,
+            "smmipsQC.mergeExtraction.timeout": null,
+            "smmipsQC.mergeCounts.modules": null,
+            "smmipsQC.mergeCounts.memory": null,
+            "smmipsQC.mergeCounts.timeout": null
+        },
+        "description": "smmipsQC workflow test",
+        "engineArguments": {
+          "write_to_cache": false,
+          "read_from_cache": false
+        },
+        "id": "Myeloid_CML_500Test",
+        "metadata": {
+            "smmipsQC.outputExtractionMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_CML_500Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smmipsQC.outputReadCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_CML_500Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_500Test.metrics",
+                "type": "script"
+            }
+        ]
+    },
+        
+    {
+        "arguments": {
+            "smmipsQC.fastq1": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R1.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.fastq2": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R2.fastq.gz",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.panel": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smmipsQC.smmipRegions": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_1000.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL" 
+            },   
+            "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
+            "smmipsQC.outdir": null,
+            "smmipsQC.maxSubs": null,
+            "smmipsQC.upstreamNucleotides": null,
+            "smmipsQC.umiLength": null,
+            "smmipsQC.match": null,
+            "smmipsQC.mismatch": null,
+            "smmipsQC.gapOpening": null,
+            "smmipsQC.gapExtension": null,
+            "smmipsQC.alignmentOverlapThreshold": null,
+            "smmipsQC.matchesThreshold": null,
+            "smmipsQC.remove": false,
+            "smmipsQC.align.modules": null,
+            "smmipsQC.align.memory": null,
+            "smmipsQC.align.timeout": null,
+            "smmipsQC.align.refFasta": null,
+            "smmipsQC.align.refFai": null,
+            "smmipsQC.align.refDict": null,
+            "smmipsQC.align.bwa": null,
+            "smmipsQC.regionsToArray.memory": null,
+            "smmipsQC.regionsToArray.timeout": null,
+            "smmipsQC.assignSmmips.modules": null,
+            "smmipsQC.assignSmmips.memory": null,
+            "smmipsQC.assignSmmips.timeout": null,
+            "smmipsQC.mergeExtraction.modules": null,
+            "smmipsQC.mergeExtraction.memory": null,
+            "smmipsQC.mergeExtraction.timeout": null,
+            "smmipsQC.mergeCounts.modules": null,
+            "smmipsQC.mergeCounts.memory": null,
+            "smmipsQC.mergeCounts.timeout": null
+        },
+        "description": "smmipsQC workflow test",
+        "engineArguments": {
+          "write_to_cache": false,
+          "read_from_cache": false
+        },
+        "id": "Myeloid_CML_1000Test",
+        "metadata": {
+            "smmipsQC.outputExtractionMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_CML_1000Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smmipsQC.outputReadCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_smmipsQC_Myeloid_CML_1000Test_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_1000Test.metrics",
+                "type": "script"
+            }
+        ]
+    }
+]

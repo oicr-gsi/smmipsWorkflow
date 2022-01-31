@@ -1,18 +1,9 @@
-﻿#!/bin/bash
-
+#!/bin/bash
 set -o nounset
+set -o errexit
 set -o pipefail
 
 cd $1
 
-#module load samtools/1.9 2>/dev/null
+find . -regex '.*\.json$' -printf "%f " -exec sh -c "cat {} | md5sum" \;
 
-ls | sort
-
-#find -name *.bam -exec samtools view -H {} \; | grep '^@RG' | sort
-
-#find -name *.bam -exec samtools flagstat {} \; | sort
-
-#find -name *.bam -exec /bin/bash -c "samtools view {} | md5sum" \; | sort
-
-#ls | sed 's/.*\.//' | sort | uniq -c
