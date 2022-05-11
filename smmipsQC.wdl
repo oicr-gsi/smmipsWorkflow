@@ -4,8 +4,8 @@ workflow smmipsQC {
   input {
     File fastq1
     File fastq2
-    File panel
-    File smmipRegions
+    String panel
+    String smmipRegions
     String outdir = "./"    
     String outputFileNamePrefix  
     Int maxSubs = 0
@@ -145,7 +145,7 @@ task assignSmmips {
     Int timeout = 36
     File sortedbam
     File sortedbamIndex
-    File panel
+    String panel
     String outdir = "./"    
     String outputFileNamePrefix  
     Int maxSubs = 0
@@ -371,7 +371,7 @@ task mergeCounts {
 
 task regionsToArray {
   input {
-    File regions
+    String regions
     Int memory = 1
     Int timeout = 1
   }
