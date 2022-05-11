@@ -25,8 +25,8 @@ Parameter|Value|Description
 ---|---|---
 `fastq1`|File|Path to Fastq1
 `fastq2`|File|Path to Fastq2
-`panel`|File|Path to file with smMIP information
-`smmipRegions`|File|Path to bed file with smmip regions
+`panel`|String|Path to file with smMIP information
+`smmipRegions`|String|Path to bed file with smmip regions
 `outputFileNamePrefix`|String|Prefix used to name the output files
 
 
@@ -77,31 +77,33 @@ Output | Type | Description
 `outputReadCounts`|File|Metric file with read counts for each smmip
 
 
-## Niassa + Cromwell
-
-This WDL workflow is wrapped in a Niassa workflow (https://github.com/oicr-gsi/pipedev/tree/master/pipedev-niassa-cromwell-workflow) so that it can used with the Niassa metadata tracking system (https://github.com/oicr-gsi/niassa).
-
-* Building
-```
-mvn clean install
-```
-
-* Testing
-```
-mvn clean verify \
--Djava_opts="-Xmx1g -XX:+UseG1GC -XX:+UseStringDeduplication" \
--DrunTestThreads=2 \
--DskipITs=false \
--DskipRunITs=false \
--DworkingDirectory=/path/to/tmp/ \
--DschedulingHost=niassa_oozie_host \
--DwebserviceUrl=http://niassa-url:8080 \
--DwebserviceUser=niassa_user \
--DwebservicePassword=niassa_user_password \
--Dcromwell-host=http://cromwell-url:8000
-```
-
-## Support
+## Commands
+ This section lists command(s) run by WORKFLOW workflow
+ 
+ * Running WORKFLOW
+ 
+ === Description here ===.
+ 
+ <<<
+     set -euo pipefail
+     smmips assign -b ~{sortedbam} -pa ~{panel} -pf ~{outputFileNamePrefix} -ms ~{maxSubs} -up ~{upstreamNucleotides} -umi ~{umiLength}  -m ~{match} -mm ~{mismatch} -go ~{gapOpening} -ge ~{gapExtension}  -ao ~{alignmentOverlapThreshold} -mt ~{matchesThreshold} -o ~{outdir} -r ~{region} ~{removeFlag}
+   >>>
+ <<<
+     set -euo pipefail
+     smmips align -bwa ~{bwa} -f1 ~{fastq1} -f2 ~{fastq2} -r ~{refFasta} -pf ~{outputFileNamePrefix} -o ~{outdir} ~{removeFlag}
+   >>>
+ <<<
+     set -euo pipefail
+     smmips merge -pf ~{outputFileNamePrefix} -ft extraction -t ~{sep =" " extractionCounts}  ~{removeFlag}
+   >>>
+ <<<
+     set -euo pipefail
+     smmips merge -pf ~{outputFileNamePrefix} -ft counts -t ~{sep =" " readCounts} ~{removeFlag}
+   >>>
+ <<<
+     cat ~{regions} | sed 's/\t/./g'
+   >>>
+ ## Support
 
 For support, please file an issue on the [Github project](https://github.com/oicr-gsi) or send an email to gsi@oicr.on.ca .
 
