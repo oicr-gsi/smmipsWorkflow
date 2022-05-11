@@ -25,30 +25,8 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
-            "smmipsQC.smmipRegions": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_200.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL" 
-            },   
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_200.bed",
             "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -141,30 +119,8 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
-            "smmipsQC.smmipRegions": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_500.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL" 
-            },   
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_500.bed",
             "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -256,30 +212,8 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
-            "smmipsQC.smmipRegions": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_1000.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL" 
-            },   
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_1000.bed",
             "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -371,30 +305,8 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
-            "smmipsQC.smmipRegions": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL" 
-            },   
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
             "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -486,30 +398,8 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
-            "smmipsQC.smmipRegions": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_500.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL" 
-            },   
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_500.bed",
             "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -601,30 +491,8 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
-            "smmipsQC.smmipRegions": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_1000.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL" 
-            },   
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_1000.bed",
             "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
