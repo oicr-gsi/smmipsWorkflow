@@ -18,6 +18,7 @@ workflow smmipsQC {
     Int alignmentOverlapThreshold = 60
     Float matchesThreshold = 0.7  
     Boolean remove = false
+    Int batchsize = 20
   }
 
 
@@ -38,11 +39,12 @@ workflow smmipsQC {
     gapExtension: "Score for extending an open gap"
     alignmentOverlapThreshold: "Cut-off value for the length of the de-gapped overlap between read1 and read2"
     matchesThreshold: "Cut-off value for the number of matching pos"
+    batchsize: "The number of intervals to run in each job"
   }
 
   meta {
-    author: "Richard Jovelin"
-    email: "richard.jovelin@oicr.on.ca"
+    author: "Richard Jovelin, Lawrence Heisler"
+    email: "richard.jovelin@oicr.on.ca, lawrence.heisler@oicr.on.ca"
     description: "Analysis of smMIP libraries"
     dependencies: [
       {
@@ -83,7 +85,8 @@ workflow smmipsQC {
 
   call regionsToArray {
     input:
-      regions = smmipRegions
+      regions = smmipRegions,
+      batchsize = batchsize
   }
 
   Array[String] genomic_regions = regionsToArray.out
@@ -188,7 +191,19 @@ task assignSmmips {
 
   command <<<
     set -euo pipefail
-    smmips assign -b ~{sortedbam} -pa ~{panel} -pf ~{outputFileNamePrefix} -ms ~{maxSubs} -up ~{upstreamNucleotides} -umi ~{umiLength}  -m ~{match} -mm ~{mismatch} -go ~{gapOpening} -ge ~{gapExtension}  -ao ~{alignmentOverlapThreshold} -mt ~{matchesThreshold} -o ~{outdir} -r ~{region} ~{removeFlag}
+    regions=~{region}
+    for r in ${regions//,/ }
+    do 
+      echo "assigning smmips to $r"
+      smmips assign -b ~{sortedbam} -pa ~{panel} -pf ~{outputFileNamePrefix} -ms ~{maxSubs} -up ~{upstreamNucleotides} -umi ~{umiLength}  -m ~{match} -mm ~{mismatch} -go ~{gapOpening} -ge ~{gapExtension}  -ao ~{alignmentOverlapThreshold} -mt ~{matchesThreshold} -o ~{outdir} -r $r ~{removeFlag}
+    done
+
+    extractionCountList=`ls stats/*.extraction_metrics.json`
+    smmips merge -pf ~{outputFileNamePrefix}_temp -ft extraction -t $extractionCountList
+    readCountList=`ls stats/*.smmip_counts.json`
+    smmips merge -pf ~{outputFileNamePrefix}_temp -ft counts -t $readCountList
+
+
   >>>
 
   runtime {
@@ -198,8 +213,8 @@ task assignSmmips {
   }
 
   output {
-  File extractionMetrics = "${outdir}/stats/${outputFileNamePrefix}_temp.${region}.extraction_metrics.json"
-  File readCounts = "${outdir}/stats/${outputFileNamePrefix}_temp.${region}.smmip_counts.json"
+  File extractionMetrics = "${outdir}/${outputFileNamePrefix}_temp_extraction_metrics.json"
+  File readCounts = "${outdir}/${outputFileNamePrefix}_temp_smmip_counts.json"
   }
 
   meta {
@@ -374,10 +389,12 @@ task regionsToArray {
     String regions
     Int memory = 1
     Int timeout = 1
+    Int batchsize
   }
 
   command <<<
-    cat ~{regions} | sed 's/\t/./g'
+    rpt=`for i in {1..~{batchsize}}; do echo -n '- '; done` 
+    cat ~{regions} | sed 's/\t/./g' | paste -d, $rpt
   >>>
 
   output {
@@ -393,5 +410,6 @@ task regionsToArray {
     regions: "Bed file with smmip region coordinates"
     memory: "Memory allocated for this job"
     timeout: "Hours before task timeout"
+    batchsize: "Number of intervals to process in a single job"
   }
 }
