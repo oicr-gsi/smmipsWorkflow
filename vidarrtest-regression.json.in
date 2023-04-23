@@ -28,6 +28,7 @@
             "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
             "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_200.bed",
             "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
+            "smmipsQC.batchsize": 30,
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
             "smmipsQC.upstreamNucleotides": null,
