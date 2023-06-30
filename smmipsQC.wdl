@@ -1,5 +1,13 @@
 version 1.0
 
+struct smmipsResources {
+    String refFasta
+    String refFai
+    String refDict
+    String bwa
+    String modules
+}
+
 workflow smmipsQC {
   input {
     File fastq1
@@ -8,6 +16,7 @@ workflow smmipsQC {
     String smmipRegions
     String outdir = "./"    
     String outputFileNamePrefix  
+    String reference
     Int maxSubs = 0
     Int upstreamNucleotides = 0
     Int umiLength = 4  
@@ -20,12 +29,22 @@ workflow smmipsQC {
     Boolean remove = false
   }
 
+  Map[String,smmipsResources] resources = {
+    "hg19": {
+      "refFasta": "$HG19_BWA_INDEX_ROOT/hg19_random.fa",
+      "refFai": "$HG19_BWA_INDEX_ROOT/hg19_random.fa.fai",
+      "refDict": "$HG19_BWA_INDEX_ROOT/hg19_random.dict",
+      "bwa": "$BWA_ROOT/bin/bwa",
+      "modules": "smmips/1.0.9 hg19-bwa-index/0.7.12 bwa/0.7.12"
+    }
+  }
 
   parameter_meta {
     outdir: "Path to directory where directory structure is created"
     fastq1: "Path to Fastq1"
     fastq2: "Path to Fastq2"
     outputFileNamePrefix: "Prefix used to name the output files"
+    reference: "Reference id, i.e. hg19 (Currently the only one supported)"
     remove: "Remove intermediate files if True"
     panel: "Path to file with smMIP information"
     smmipRegions: "Path to bed file with smmip regions"
@@ -74,7 +93,12 @@ workflow smmipsQC {
       fastq2 = fastq2,
       outdir = outdir,
       outputFileNamePrefix = outputFileNamePrefix,
-      remove = removeIntermediate
+      remove = removeIntermediate,
+      modules = resources[reference].modules,
+      refFasta = resources[reference].refFasta,
+      refFai = resources[reference].refFai,
+      refDict = resources[reference].refDict,
+      bwa = resources[reference].bwa
   }
 
    File sortedbam = align.sortedbam
@@ -91,6 +115,7 @@ workflow smmipsQC {
   scatter(region in genomic_regions) {
     call assignSmmips {
       input:
+        modules = resources[reference].modules,
         sortedbam = sortedbam,
         sortedbamIndex = sortedbamIndex,
         panel = panel,
@@ -117,6 +142,7 @@ workflow smmipsQC {
   
   call mergeExtraction {
     input:
+      modules = resources[reference].modules,
       outdir = outdir,    
       remove = removeIntermediate,
       outputFileNamePrefix = outputFileNamePrefix,
@@ -125,6 +151,7 @@ workflow smmipsQC {
 
   call mergeCounts {
     input:
+      modules = resources[reference].modules,
       outdir = outdir,    
       remove = removeIntermediate,
       outputFileNamePrefix = outputFileNamePrefix,
@@ -140,7 +167,7 @@ workflow smmipsQC {
 
 task assignSmmips {
   input {
-    String modules = "smmips/1.0.9"
+    String modules
     Int memory = 32
     Int timeout = 36
     File sortedbam
@@ -214,7 +241,7 @@ task assignSmmips {
 
 task align {
   input {
-    String modules = "smmips/1.0.9 hg19-bwa-index/0.7.12 bwa/0.7.12"
+    String modules
     Int memory = 32
     Int timeout = 36
     File fastq1
@@ -222,10 +249,10 @@ task align {
     String outdir = "./"    
     String outputFileNamePrefix  
     Boolean remove
-    String refFasta = "$HG19_BWA_INDEX_ROOT/hg19_random.fa"
-    String refFai = "$HG19_BWA_INDEX_ROOT/hg19_random.fa.fai"
-    String refDict = "$HG19_BWA_INDEX_ROOT/hg19_random.dict"
-    String bwa = "$BWA_ROOT/bin/bwa"
+    String refFasta
+    String refFai
+    String refDict
+    String bwa
   }
 
   
@@ -274,7 +301,7 @@ task align {
 
 task mergeExtraction {
   input {
-    String modules = "smmips/1.0.9"
+    String modules
     Int memory = 32
     Int timeout = 36
     Boolean remove
@@ -323,7 +350,7 @@ task mergeExtraction {
 
 task mergeCounts {
   input {
-    String modules = "smmips/1.0.9"
+    String modules
     Int memory = 32
     Int timeout = 36
     Boolean remove
