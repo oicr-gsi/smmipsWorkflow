@@ -4,8 +4,7 @@ struct smmipsResources {
     String refFasta
     String refFai
     String refDict
-    String bwa
-    String modules
+    String refModule
 }
 
 workflow smmipsQC {
@@ -34,8 +33,7 @@ workflow smmipsQC {
       "refFasta": "$HG19_BWA_INDEX_ROOT/hg19_random.fa",
       "refFai": "$HG19_BWA_INDEX_ROOT/hg19_random.fa.fai",
       "refDict": "$HG19_BWA_INDEX_ROOT/hg19_random.dict",
-      "bwa": "$BWA_ROOT/bin/bwa",
-      "modules": "smmips/1.0.9 hg19-bwa-index/0.7.12 bwa/0.7.12"
+      "refModule": "hg19-bwa-index/0.7.12"
     }
   }
 
@@ -94,11 +92,10 @@ workflow smmipsQC {
       outdir = outdir,
       outputFileNamePrefix = outputFileNamePrefix,
       remove = removeIntermediate,
-      modules = resources[reference].modules,
+      refModule = resources[reference].refModule,
       refFasta = resources[reference].refFasta,
       refFai = resources[reference].refFai,
       refDict = resources[reference].refDict,
-      bwa = resources[reference].bwa
   }
 
    File sortedbam = align.sortedbam
@@ -115,7 +112,6 @@ workflow smmipsQC {
   scatter(region in genomic_regions) {
     call assignSmmips {
       input:
-        modules = resources[reference].modules,
         sortedbam = sortedbam,
         sortedbamIndex = sortedbamIndex,
         panel = panel,
@@ -142,7 +138,6 @@ workflow smmipsQC {
   
   call mergeExtraction {
     input:
-      modules = resources[reference].modules,
       outdir = outdir,    
       remove = removeIntermediate,
       outputFileNamePrefix = outputFileNamePrefix,
@@ -151,7 +146,6 @@ workflow smmipsQC {
 
   call mergeCounts {
     input:
-      modules = resources[reference].modules,
       outdir = outdir,    
       remove = removeIntermediate,
       outputFileNamePrefix = outputFileNamePrefix,
@@ -167,7 +161,7 @@ workflow smmipsQC {
 
 task assignSmmips {
   input {
-    String modules
+    String modules = "smmips/1.0.9"
     Int memory = 32
     Int timeout = 36
     File sortedbam
@@ -241,7 +235,6 @@ task assignSmmips {
 
 task align {
   input {
-    String modules
     Int memory = 32
     Int timeout = 36
     File fastq1
@@ -249,10 +242,12 @@ task align {
     String outdir = "./"    
     String outputFileNamePrefix  
     Boolean remove
+    String refModule    
     String refFasta
     String refFai
     String refDict
-    String bwa
+    String bwa = "$BWA_ROOT/bin/bwa"
+    String modules = "smmips/1.0.9 bwa/0.7.12 ~{refModule}"
   }
 
   
@@ -301,7 +296,7 @@ task align {
 
 task mergeExtraction {
   input {
-    String modules
+    String modules = "smmips/1.0.9"
     Int memory = 32
     Int timeout = 36
     Boolean remove
@@ -350,7 +345,7 @@ task mergeExtraction {
 
 task mergeCounts {
   input {
-    String modules
+    String modules = "smmips/1.0.9"
     Int memory = 32
     Int timeout = 36
     Boolean remove
