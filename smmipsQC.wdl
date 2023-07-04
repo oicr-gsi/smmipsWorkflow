@@ -95,7 +95,7 @@ workflow smmipsQC {
       refModule = resources[reference].refModule,
       refFasta = resources[reference].refFasta,
       refFai = resources[reference].refFai,
-      refDict = resources[reference].refDict,
+      refDict = resources[reference].refDict
   }
 
    File sortedbam = align.sortedbam
