@@ -28,6 +28,7 @@ Parameter|Value|Description
 `panel`|String|Path to file with smMIP information
 `smmipRegions`|String|Path to bed file with smmip regions
 `outputFileNamePrefix`|String|Prefix used to name the output files
+`reference`|String|Reference assembly id
 
 
 #### Optional workflow parameters:
@@ -49,13 +50,8 @@ Parameter|Value|Default|Description
 #### Optional task parameters:
 Parameter|Value|Default|Description
 ---|---|---|---
-`align.modules`|String|"smmips/1.0.9 hg19-bwa-index/0.7.12 bwa/0.7.12"|Names and versions of modules to load
 `align.memory`|Int|32|Memory allocated for this job
 `align.timeout`|Int|36|Hours before task timeout
-`align.refFasta`|String|"$HG19_BWA_INDEX_ROOT/hg19_random.fa"|Path to to the reference genome
-`align.refFai`|String|"$HG19_BWA_INDEX_ROOT/hg19_random.fa.fai"|Path to the reference index
-`align.refDict`|String|"$HG19_BWA_INDEX_ROOT/hg19_random.dict"|Path to the reference dictionary
-`align.bwa`|String|"$BWA_ROOT/bin/bwa"|Path to the bwa script
 `regionsToArray.memory`|Int|1|Memory allocated for this job
 `regionsToArray.timeout`|Int|1|Hours before task timeout
 `assignSmmips.modules`|String|"smmips/1.0.9"|Names and versions of modules to load
