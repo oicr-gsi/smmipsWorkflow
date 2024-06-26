@@ -77,9 +77,15 @@ workflow smmipsQC {
     ]
     
     output_meta: {
-    outputExtractionMetrics: "Metrics file with extracted read counts",
-    outputReadCounts: "Metric file with read counts for each smmip"
+    outputExtractionMetrics: {
+        description: "Metrics file with extracted read counts",
+        vidarr_label: "outputExtractionMetrics"
+    },
+    outputReadCounts: {
+        description: "Metric file with read counts for each smmip",
+        vidarr_label: "outputReadCounts"
     }
+}
   }
   
 

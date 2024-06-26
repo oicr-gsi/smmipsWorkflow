@@ -1,0 +1,38 @@
+## Commands
+This section lists command(s) run by smmipsQC workflow
+
+* Running smmipsQC
+
+### Assign
+
+```
+    set -euo pipefail
+    smmips assign -b ~{sortedbam} -pa ~{panel} -pf ~{outputFileNamePrefix} -ms ~{maxSubs} -up ~{upstreamNucleotides} -umi ~{umiLength}  -m ~{match} -mm ~{mismatch} -go ~{gapOpening} -ge ~{gapExtension}  -ao ~{alignmentOverlapThreshold} -mt ~{matchesThreshold} -o ~{outdir} -r ~{region} ~{removeFlag}
+```
+
+### Align
+
+```
+    set -euo pipefail
+    smmips align -bwa ~{bwa} -f1 ~{fastq1} -f2 ~{fastq2} -r ~{refFasta} -pf ~{outputFileNamePrefix} -o ~{outdir} ~{removeFlag}
+```
+
+### Merge
+
+```
+    set -euo pipefail
+    smmips merge -pf ~{outputFileNamePrefix} -ft extraction -t ~{sep =" " extractionCounts}  ~{removeFlag}
+```
+
+### Merge
+
+```
+    set -euo pipefail
+    smmips merge -pf ~{outputFileNamePrefix} -ft counts -t ~{sep =" " readCounts} ~{removeFlag}
+```
+
+### Post-process
+
+```
+    cat ~{regions} | sed 's/\t/./g'
+```

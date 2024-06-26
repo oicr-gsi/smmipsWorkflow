@@ -28,7 +28,7 @@ Parameter|Value|Description
 `panel`|String|Path to file with smMIP information
 `smmipRegions`|String|Path to bed file with smmip regions
 `outputFileNamePrefix`|String|Prefix used to name the output files
-`reference`|String|Reference assembly id
+`reference`|String|Reference id, i.e. hg19 (Currently the only one supported)
 
 
 #### Optional workflow parameters:
@@ -52,6 +52,8 @@ Parameter|Value|Default|Description
 ---|---|---|---
 `align.memory`|Int|32|Memory allocated for this job
 `align.timeout`|Int|36|Hours before task timeout
+`align.bwa`|String|"$BWA_ROOT/bin/bwa"|Path to the bwa script
+`align.modules`|String|"smmips/1.0.9 bwa/0.7.12 ~{refModule}"|Names and versions of modules to load
 `regionsToArray.memory`|Int|1|Memory allocated for this job
 `regionsToArray.timeout`|Int|1|Hours before task timeout
 `assignSmmips.modules`|String|"smmips/1.0.9"|Names and versions of modules to load
@@ -67,39 +69,51 @@ Parameter|Value|Default|Description
 
 ### Outputs
 
-Output | Type | Description
----|---|---
-`outputExtractionMetrics`|File|Metrics file with extracted read counts
-`outputReadCounts`|File|Metric file with read counts for each smmip
+Output | Type | Description | Labels
+---|---|---|---
+`outputExtractionMetrics`|File|Metrics file with extracted read counts|vidarr_label: outputExtractionMetrics
+`outputReadCounts`|File|Metric file with read counts for each smmip|vidarr_label: outputReadCounts
 
 
 ## Commands
- This section lists command(s) run by WORKFLOW workflow
+This section lists command(s) run by smmipsQC workflow
  
- * Running WORKFLOW
+* Running smmipsQC
  
- === Description here ===.
+### Assign
  
- <<<
+```
      set -euo pipefail
      smmips assign -b ~{sortedbam} -pa ~{panel} -pf ~{outputFileNamePrefix} -ms ~{maxSubs} -up ~{upstreamNucleotides} -umi ~{umiLength}  -m ~{match} -mm ~{mismatch} -go ~{gapOpening} -ge ~{gapExtension}  -ao ~{alignmentOverlapThreshold} -mt ~{matchesThreshold} -o ~{outdir} -r ~{region} ~{removeFlag}
-   >>>
- <<<
+```
+ 
+### Align
+ 
+```
      set -euo pipefail
      smmips align -bwa ~{bwa} -f1 ~{fastq1} -f2 ~{fastq2} -r ~{refFasta} -pf ~{outputFileNamePrefix} -o ~{outdir} ~{removeFlag}
-   >>>
- <<<
+```
+ 
+### Merge
+ 
+```
      set -euo pipefail
      smmips merge -pf ~{outputFileNamePrefix} -ft extraction -t ~{sep =" " extractionCounts}  ~{removeFlag}
-   >>>
- <<<
+```
+ 
+### Merge
+ 
+```
      set -euo pipefail
      smmips merge -pf ~{outputFileNamePrefix} -ft counts -t ~{sep =" " readCounts} ~{removeFlag}
-   >>>
- <<<
+```
+ 
+### Post-process
+ 
+```
      cat ~{regions} | sed 's/\t/./g'
-   >>>
- ## Support
+```
+## Support
 
 For support, please file an issue on the [Github project](https://github.com/oicr-gsi) or send an email to gsi@oicr.on.ca .
 
