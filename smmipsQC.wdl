@@ -60,7 +60,7 @@ workflow smmipsQC {
   meta {
     author: "Richard Jovelin"
     email: "richard.jovelin@oicr.on.ca"
-    description: "Analysis of smMIP libraries"
+    description: "smMIPs is tool for generating QC metrics in sequenced Single Molecule Molecular Inversion Probes libraries. The workflow accepts fastq files, does it's own alignment and generates metrics files"
     dependencies: [
       {
         name: "bwa/0.7.12",
