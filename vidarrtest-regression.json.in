@@ -3,7 +3,7 @@
         "arguments": {
             "smmipsQC.fastq1": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R1.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/ARCHCVD_Test_R1.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -15,7 +15,7 @@
             },
             "smmipsQC.fastq2": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R2.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/ARCHCVD_Test_R2.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -25,9 +25,9 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
-            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_200.bed",
-            "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_regions_200.bed",
+            "smmipsQC.outputFileNamePrefix": "ARCHCVD_Test",
             "smmipsQC.reference": "hg19",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -87,7 +87,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_200Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/workflow_test_01.metrics",
                 "type": "script"
             }
         ]
@@ -98,7 +98,7 @@
         "arguments": {
             "smmipsQC.fastq1": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R1.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/ARCHCVD_Test_R1.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -110,7 +110,7 @@
             },
             "smmipsQC.fastq2": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R2.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/ARCHCVD_Test_R2.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -120,9 +120,9 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
-            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_500.bed",
-            "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_regions_500.bed",
+            "smmipsQC.outputFileNamePrefix": "ARCHCVD_Test",
             "smmipsQC.reference": "hg19",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -182,7 +182,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_500Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/workflow_test_02.metrics",
                 "type": "script"
             }
         ]
@@ -192,7 +192,7 @@
         "arguments": {
             "smmipsQC.fastq1": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R1.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/ARCHCVD_Test_R1.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -204,7 +204,7 @@
             },
             "smmipsQC.fastq2": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/ARCHCVD_0475_Ly_R_PE_312_TS_211018_M00753_0388_000000000-DDTPG_1_TGACGTGC-TCTGATAG_R2.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/ARCHCVD_Test_R2.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -214,9 +214,9 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_smMIPS_panel.txt",
-            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_regions_1000.bed",
-            "smmipsQC.outputFileNamePrefix": "ARCHCVD_0475_Ly_R_PE_312_TS",
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_regions_1000.bed",
+            "smmipsQC.outputFileNamePrefix": "ARCHCVD_Test",
             "smmipsQC.reference": "hg19",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -276,7 +276,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_1000Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/workflow_test_03.metrics",
                 "type": "script"
             }
         ]
@@ -286,7 +286,7 @@
         "arguments": {
             "smmipsQC.fastq1": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R1.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/TCML_Test_R1.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -298,7 +298,7 @@
             },
             "smmipsQC.fastq2": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R2.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/TCML_Test_R2.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -308,9 +308,9 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
-            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_200.bed",
-            "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_CML_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_CML_regions_200.bed",
+            "smmipsQC.outputFileNamePrefix": "TCML_Test",
             "smmipsQC.reference": "hg19",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -370,7 +370,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_200Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/workflow_test_04.metrics",
                 "type": "script"
             }
         ]
@@ -380,7 +380,7 @@
         "arguments": {
             "smmipsQC.fastq1": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R1.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/TCML_Test_R1.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -392,7 +392,7 @@
             },
             "smmipsQC.fastq2": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R2.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/TCML_Test_R2.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -402,9 +402,9 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
-            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_500.bed",
-            "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_CML_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_CML_regions_500.bed",
+            "smmipsQC.outputFileNamePrefix": "TCML_Test",
             "smmipsQC.reference": "hg19",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -464,7 +464,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_500Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/workflow_test_05.metrics",
                 "type": "script"
             }
         ]
@@ -474,7 +474,7 @@
         "arguments": {
             "smmipsQC.fastq1": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R1.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/TCML_Test_R1.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -486,7 +486,7 @@
             },
             "smmipsQC.fastq2": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/TCML_02013_Pb_P_PE_305_TS_211215_M00753_0403_000000000-DF9G7_1_GCTAGCCA-GACCTCAG_R2.fastq.gz",
+                    "configuration": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/TCML_Test_R2.fastq.gz",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -496,9 +496,9 @@
                 },
                 "type": "EXTERNAL"
             },
-            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_smMIPS_panel.txt",
-            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/input_data/Myeloid_CML_regions_1000.bed",
-            "smmipsQC.outputFileNamePrefix": "TCML_02013_Pb_P_PE_305_TS",
+            "smmipsQC.panel": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_CML_smMIPS_panel.txt",
+            "smmipsQC.smmipRegions": "/.mounts/labs/gsi/testdata/smmipsWorkflow/test_inputs/Myeloid_CML_regions_1000.bed",
+            "smmipsQC.outputFileNamePrefix": "TCML_Test",
             "smmipsQC.reference": "hg19",
             "smmipsQC.outdir": null,
             "smmipsQC.maxSubs": null,
@@ -558,7 +558,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/Myeloid_CML_1000Test.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smmipsWorkflow/output_metrics/workflow_test_06.metrics",
                 "type": "script"
             }
         ]
